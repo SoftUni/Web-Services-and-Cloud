@@ -1,0 +1,41 @@
+1. Global.asax file
+	1.Identity config
+	2.Route config
+	3.Startup config
+	4.WebApi config
+2. Controllers
+	1. Account
+	2. MVC
+	3. WebApi
+3. Register
+	url: /api/Account/Register
+	Email, Password, ConfirmPassword
+4. Login
+	url: /Token
+	grant_type: password
+	username: vlado2@softuni.bg
+	password: Aa123456!
+5. Authorize
+	controller attribute, action attribute
+	Add Authorize as filter (global)
+6. Authorized queries
+	Authorization: Bearer access_token
+7. Identity models
+	ApplicationUser - IdentityUser
+	DbContext - IdentityDbContext<ApplicationUser>
+8. Data and Models libraries
+	Add EntityFramework package
+	Add Microsoft ASP.NET Identity EntityFramework package
+9. Add migrations
+10. Add Database.SetInitializer in DbContext constructor (System.Data.Entity)
+11. Register
+12. Show databases
+13. Repository
+14. Unit of work
+15. Ninject OWIN host for WebApi 2
+	Install-Package Ninject.Web.WebApi.OwinHost -Version 3.2.1 -DependencyVersion Highest
+	http://stackoverflow.com/questions/28473320/ninject-causes-notimplementedexception-at-httpcontextbase-get-response
+15. BaseApiController
+
+
+-sJVz7IeXc3NcPQRDtTWYc0PtJeY5UjyOVKXPPvHbDR8SDyG69HeduFOyk2-_oqwzHNQOB0rP8NWNH6aVGgWSfqhgvadqpnBqnbJfeUDnj6DHFphqdE_caypScdbGVfTZZpgBBjPUL8jRf21rWVZkLfNo4YlT0VS1vRz230Mblc2UeovXJhd--T_HfVYoJL_dP3ZUjJELIH2iG18FEQMeEl34qrrEpD5HITJCJ8yuWds0rr6FwM9EqPQgNJQ8QSAlL6sRu13baQ6AxTuGDGM5Nwe4Pjdp9vTob3eyZh1CVnqLgj2ZxFbkm3mQPy1rSlL_RmYW3x5opTKPiL93dT5PbBP4pFCzv9jd997-M_Z77bnI9NDIta_L9poL3FJ0wkNf8fh8fGQV6EZFxfw3SGtPfGAFhyWn8BBgTMdg-jT58urtdyoA7JShH_WmBmwu_F76byZFAbGISQrb17DKTSyKY3Q3TlWv3QYau9rWSMBYsI
