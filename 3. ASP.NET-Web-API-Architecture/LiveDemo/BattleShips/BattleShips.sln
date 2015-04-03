@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleShips.Data", "BattleShips.Data\BattleShips.Data.csproj", "{46F46CB6-EFB7-43C5-8806-A6A981E39AF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleShips.Models", "BattleShips.Models\BattleShips.Models.csproj", "{048D89D0-F4F7-4806-8798-906B2BC6ADAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleShips.Service", "BattleShips.Service\BattleShips.Service.csproj", "{6C6F4127-C0FB-48C6-ABEF-C6A069F08ACF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleShips.GameLogic", "BattleShips.GameLogic\BattleShips.GameLogic.csproj", "{9EA6FBF9-C753-4507-8092-53D5A15868A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46F46CB6-EFB7-43C5-8806-A6A981E39AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F46CB6-EFB7-43C5-8806-A6A981E39AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F46CB6-EFB7-43C5-8806-A6A981E39AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F46CB6-EFB7-43C5-8806-A6A981E39AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{048D89D0-F4F7-4806-8798-906B2BC6ADAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048D89D0-F4F7-4806-8798-906B2BC6ADAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048D89D0-F4F7-4806-8798-906B2BC6ADAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048D89D0-F4F7-4806-8798-906B2BC6ADAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C6F4127-C0FB-48C6-ABEF-C6A069F08ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C6F4127-C0FB-48C6-ABEF-C6A069F08ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C6F4127-C0FB-48C6-ABEF-C6A069F08ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C6F4127-C0FB-48C6-ABEF-C6A069F08ACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA6FBF9-C753-4507-8092-53D5A15868A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA6FBF9-C753-4507-8092-53D5A15868A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA6FBF9-C753-4507-8092-53D5A15868A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA6FBF9-C753-4507-8092-53D5A15868A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
