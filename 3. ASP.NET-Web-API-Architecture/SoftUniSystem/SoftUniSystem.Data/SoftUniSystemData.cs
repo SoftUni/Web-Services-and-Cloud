@@ -23,6 +23,15 @@
             get { return this.GetRepository<ApplicationUser>(); }
         }
 
+        public IRepository<Game> Games
+        {
+            get { return this.GetRepository<Game>(); }
+        }
+
+        public IRepository<GameResult> Results
+        {
+            get { return this.GetRepository<GameResult>(); }
+        }
 
         public int SaveChanges()
         {
@@ -39,6 +48,6 @@
             }
 
             return (IRepository<T>)this.repositories[typeOfRepository];
-        } 
+        }
     }
 }

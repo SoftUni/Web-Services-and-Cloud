@@ -6,8 +6,10 @@
     public interface ISoftUniSystemData
     {
         IRepository<ApplicationUser> Users { get; }
- 
-        // TODO: Add repositories
+
+        IRepository<Game> Games { get; }
+
+        IRepository<GameResult> Results { get; }
 
         int SaveChanges();
     }

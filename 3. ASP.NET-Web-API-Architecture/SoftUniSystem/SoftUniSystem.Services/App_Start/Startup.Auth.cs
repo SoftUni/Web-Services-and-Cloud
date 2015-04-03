@@ -6,7 +6,9 @@
     using Microsoft.Owin;
     using Microsoft.Owin.Security.Cookies;
     using Microsoft.Owin.Security.OAuth;
-    
+
+    using Ninject.Web.Common.OwinHost;
+
     using Owin;
 
     using SoftUniSystem.Data;
@@ -38,7 +40,7 @@
                 Provider = new ApplicationOAuthProvider(PublicClientId),
                 AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(14),
-                AllowInsecureHttp = true
+                AllowInsecureHttp = true,
             };
 
             // Enable the application to use bearer tokens to authenticate users
