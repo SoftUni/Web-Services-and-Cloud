@@ -8,6 +8,7 @@ namespace Battleships.WebServices
     using System.Reflection;
     using System.Security.Principal;
     using System.Web.Http;
+    using System.Web.Mvc;
     using System.Web.Routing;
 
     using Battleships.Data;
@@ -27,7 +28,12 @@ namespace Battleships.WebServices
         {
             ConfigureAuth(app);
 
-            app.UseNinjectMiddleware(this.CreateKernel).UseNinjectWebApi(GlobalConfiguration.Configuration);
+            var httpConfig = new HttpConfiguration();
+
+            WebApiConfig.Register(httpConfig);
+
+            app.UseNinjectMiddleware(this.CreateKernel)
+               .UseNinjectWebApi(httpConfig);
         }
 
         private IKernel CreateKernel()
@@ -46,7 +52,6 @@ namespace Battleships.WebServices
             kernel.Bind<DbContext>().To<ApplicationDbContext>();
             kernel.Bind<IBattleshipsData>().To<BattleshipsData>();
             kernel.Bind<IUserIdProvider>().To<AspNetUserIdProvider>();
-            
         }
     }
 }
