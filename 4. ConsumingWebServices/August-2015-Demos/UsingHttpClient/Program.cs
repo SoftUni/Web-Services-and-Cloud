@@ -38,7 +38,6 @@
             var task = PrintAllPostsAsync();
             Console.WriteLine("Waiting for the above task to complete...");
             Console.ReadLine();
-
         }
 
         static async Task PrintAllPostsAsync()
