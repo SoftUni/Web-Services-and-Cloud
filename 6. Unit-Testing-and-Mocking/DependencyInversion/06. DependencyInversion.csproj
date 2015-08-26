@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D885272-A0B9-4D5A-A02B-09D6D79D9823}</ProjectGuid>
+    <ProjectGuid>{787507B0-650F-4F7C-901C-A99941B6E924}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleLogger</RootNamespace>
-    <AssemblyName>ConsoleLogger</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>DependencyInversion</RootNamespace>
+    <AssemblyName>DependencyInversion</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,12 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsolePrinter.cs" />
-    <Compile Include="ConsoleLoggerMain.cs" />
+    <Compile Include="Bindings.cs" />
+    <Compile Include="DirectoryTraversal\DirectoryProvider.cs" />
+    <Compile Include="DirectoryTraversal\DirectoryTraverser.cs" />
+    <Compile Include="DirectoryTraversal\IDirectoryProvider.cs" />
+    <Compile Include="Printer\ConsolePrinter.cs" />
+    <Compile Include="Printer\IFormatter.cs" />
+    <Compile Include="Printer\JsonFormatter.cs" />
+    <Compile Include="Printer\UrlFormatter.cs" />
+    <Compile Include="Printer\XmlFormatter.cs" />
+    <Compile Include="DependencyInversionMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RpgGame\Character.cs" />
+    <Compile Include="RpgGame\IRandomNumberProvider.cs" />
+    <Compile Include="RpgGame\Item.cs" />
+    <Compile Include="RpgGame\RandomNumberProvider.cs" />
+    <Compile Include="WebCrawler\Crawler.cs" />
+    <Compile Include="WebCrawler\HtmlProvider.cs" />
+    <Compile Include="WebCrawler\IHtmlProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

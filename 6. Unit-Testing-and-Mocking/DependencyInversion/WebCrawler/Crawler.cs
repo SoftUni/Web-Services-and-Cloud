@@ -1,8 +1,6 @@
-﻿namespace WebCrawler
+﻿namespace DependencyInversion.WebCrawler
 {
     using System.Collections.Generic;
-    using System.IO;
-    using System.Net;
     using System.Text.RegularExpressions;
 
     public class Crawler
@@ -24,10 +22,16 @@
             }
         }
 
+        public Crawler(IHtmlProvider htmlProvider)
+        {
+            this.HtmlProvider = htmlProvider;
+        }
+
+        public IHtmlProvider HtmlProvider { get; set; }
+
         public IEnumerable<string> ExtractImageUrls(string pageUrl)
         {
-            var client = new WebClient();
-            var html = client.DownloadString(pageUrl);
+            var html = this.HtmlProvider.Download(pageUrl);
 
             return this.ParseImages(html);
         }

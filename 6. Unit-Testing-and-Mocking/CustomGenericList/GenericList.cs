@@ -2,6 +2,7 @@
 
 namespace CustomGenericList
 {
+    // TODO: Finish testing, still bugs to fix
     public class GenericList<T> where T : IComparable<T>
     {
         private T[] arr;
@@ -108,7 +109,15 @@ namespace CustomGenericList
 
         public int Find(T element)
         {
-            return Array.BinarySearch<T>(arr, 0, Count, element);
+            for (int i = 0; i < this.Count; i++)
+            {
+                if (this.arr[i].Equals(element))
+                {
+                    return i;
+                }
+            }
+
+            return -1;
         }
 
         public void CheckIndex(int index)

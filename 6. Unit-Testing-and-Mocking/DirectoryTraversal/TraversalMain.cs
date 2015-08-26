@@ -6,8 +6,7 @@
     {
         static void Main()
         {
-            var traverser = new DirectoryTraverser(
-                @"C:\SVN\web-services-and-cloud\August-2015");
+            var traverser = new DirectoryTraverser(@"C:\");
 
             var children = traverser.GetChildDirectories();
             foreach (var child in children)

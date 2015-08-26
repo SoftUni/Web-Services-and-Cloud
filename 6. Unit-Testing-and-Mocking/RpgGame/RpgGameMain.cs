@@ -13,7 +13,7 @@
                 new Item("Shield", 5, 50),
                 new Item("Resilience Potion", 0, 30)
             };
-
+            
             var character = new Character(possibleItemDrops);
 
             var droppedItem = character.DropItem();

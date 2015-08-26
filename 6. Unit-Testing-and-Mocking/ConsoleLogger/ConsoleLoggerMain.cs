@@ -4,8 +4,8 @@
     {
         static void Main()
         {
-            var logger = new Logger();
-            logger.Log("Invalid operation exception");
+            var logger = new ConsolePrinter();
+            logger.Print("Invalid operation exception");
         }
     }
 }
